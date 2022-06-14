@@ -35,3 +35,10 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      - name: Upload html test report
+        uses: actions/upload-artifact@v3
+        with:
+         name: lint.html
+         path: app/build/reports/lint-results-debug.html
+
