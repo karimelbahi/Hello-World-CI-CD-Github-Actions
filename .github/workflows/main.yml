@@ -56,7 +56,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Checkout the code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Run espresso tests
         uses: reactivecircus/android-emulator-runner@v2
