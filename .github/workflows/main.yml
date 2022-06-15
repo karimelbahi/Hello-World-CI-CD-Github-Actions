@@ -137,6 +137,10 @@ jobs:
           with:
             java-version: 11
 
+      distribute-ios:
+      needs: build-ios # This is important
+      runs-on: ubuntu-latest
+
         - name: Build Gradle
           run: ./gradlew build
 
