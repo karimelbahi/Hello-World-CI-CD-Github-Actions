@@ -3,6 +3,8 @@
 buildscript {
     dependencies {
         classpath("org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.4.0.2513")
+        classpath ("com.google.gms:google-services:4.3.10")
+
     }
 }
 

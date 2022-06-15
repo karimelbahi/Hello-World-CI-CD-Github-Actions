@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "113645249174",
+    "project_id": "helloworld-cicd-github-actions",
+    "storage_bucket": "helloworld-cicd-github-actions.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113645249174:android:953f24bf211947470b18b7",
+        "android_client_info": {
+          "package_name": "com.example.hello_world_ci_cd_github_actions"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "113645249174-4pqeuvkm1fqmp5er0bnj5funj0fmduk1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChv632msw-Ne7KtR1YxRDnoT09IBCQBLQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "113645249174-4pqeuvkm1fqmp5er0bnj5funj0fmduk1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

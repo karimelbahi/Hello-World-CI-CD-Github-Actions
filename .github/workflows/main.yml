@@ -126,22 +126,32 @@ jobs:
           name: Hello-World-CI-CD-Github-Actions.apk
           path: app/build/outputs/apk/debug/app-debug.apk
 
-  deploy:
-    needs: [ package ]
-    name: Distribut For Alpha Testing
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download latest artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: Hello-World-CI-CD-Github-Actions.apk
+  builds:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v2
 
-      - name: Upload to app center
-        uses: wzieba/AppCenter-Github-Action@v1
-        with:
-          appName: karimelbahi/Hello-World-CI-CD-Github-Actions
-          token: ${{ secrets.APP_CENTER_TOKEN }}
-          group: AlphaTesters
-          file: Hello-World-CI-CD-Github-Actions.apk
-          notifyTesters: true
-          debug: true
+        - name: Setup Java JDK
+          uses: actions/setup-java@v1
+          with:
+            java-version: 11
+
+        - name: Build Gradle
+          run: ./gradlew build
+
+        - name: Upload a Build Artifact
+          uses: actions/upload-artifact@v2
+          with:
+            name: app
+            path: app/build/outputs/apk/debug/app-debug.apk
+
+        - name: Upload Artifact To Firebase App Distribution
+          uses: wzieba/Firebase-Distribution-Github-Action@v1.3.2
+          with:
+            appId: ${{ secrets.FIREBASE_ID }}
+            token: ${{ secrets.FIREBASE_TOKEN }}
+            groups: QA
+            releaseNotes: "Hey! This my first integrate Firebase distributions with Github Actions"
+            file: app/build/outputs/apk/debug/app-debug.apk
+
