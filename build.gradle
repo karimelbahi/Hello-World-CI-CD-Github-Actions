@@ -6,7 +6,6 @@ plugins {
 //    id 'rg.sonarqube' version "3.4.0.2513"
 
 }
-
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
