@@ -142,6 +142,6 @@ jobs:
           appName: karimelbahi/Hello-World-CI-CD-Github-Actions
           token: ${{ secrets.APP_CENTER_TOKEN }}
           group: AlphaTesters
-          file: expense-manager.apk
+          file: Hello-World-CI-CD-Github-Actions.apk
           notifyTesters: true
           debug: true
