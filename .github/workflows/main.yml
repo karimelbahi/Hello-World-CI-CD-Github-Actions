@@ -134,7 +134,7 @@ jobs:
       - name: Download latest artifact
         uses: actions/download-artifact@v2
         with:
-          name: expense-manager.apk
+          name: Hello-World-CI-CD-Github-Actions.apk
 
       - name: Upload to app center
         uses: wzieba/AppCenter-Github-Action@v1
