@@ -137,10 +137,6 @@ jobs:
           with:
             java-version: 11
 
-      distribute-ios:
-      needs: build-ios # This is important
-      runs-on: ubuntu-latest
-
         - name: Build Gradle
           run: ./gradlew build
 
@@ -151,7 +147,7 @@ jobs:
             path: app/build/outputs/apk/debug/app-debug.apk
 
         - name: Upload Artifact To Firebase App Distribution
-          uses: wzieba/Firebase-Distribution-Github-Action@v1.3.2
+          uses: wzieba/Firebase-Distribution-Github-Action@v1
           with:
             appId: ${{ secrets.FIREBASE_ID }}
             token: ${{ secrets.FIREBASE_TOKEN }}
