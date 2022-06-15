@@ -2,7 +2,6 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'org.sonarqube'
-//    id "org.sonarqube" version "3.4.0.2513"
 
 }
 
