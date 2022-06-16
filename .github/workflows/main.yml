@@ -151,6 +151,11 @@ jobs:
             name: app
             path: app/build/outputs/apk/debug/app-debug.apk
 
+        - name: build release
+          run: ./gradlew assembleRelease
+        - name: list files
+          run: ls -lrt app/build/outputs/apk/release
+
         - name: Upload Artifact To Firebase App Distribution
           uses: wzieba/Firebase-Distribution-Github-Action@v1
           with:
@@ -158,7 +163,7 @@ jobs:
             token: ${{ secrets.FIREBASE_TOKEN }}
             groups: QA
             releaseNotes: "Hey! This my first integrate Firebase distributions with Github Actions"
-            file: app/build/outputs/apk/debug/androidTest/app-debug.apk
+            file: app/build/outputs/apk/release/app-release.apk
 
 #  build-ios:
 #    runs-on: macos-latest
