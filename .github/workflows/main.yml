@@ -124,7 +124,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: Hello-World-CI-CD-Github-Actions.apk
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: app/build/outputs/apk/debug/Hello-World-CI-CD-Github-Actions.apk
 
   build-ios:
     needs: [ package ]
@@ -150,12 +150,12 @@ jobs:
           uses: actions/upload-artifact@v2
           with:
             name: app
-            path: app/build/outputs/apk/debug/app-debug.apk
+            path: app/build/outputs/apk/debug/Hello-World-CI-CD-Github-Actions.apk
 
         - name: build release
           run: ./gradlew assembleRelease
-        - name: list files
-          run: ls -lrt aapp/build/outputs/apk/debug
+#        - name: list files
+#          run: ls -lrt aapp/build/outputs/apk/debug
 
         - name: Upload Artifact To Firebase App Distribution
           uses: wzieba/Firebase-Distribution-Github-Action@v1
@@ -164,7 +164,7 @@ jobs:
             token: ${{ secrets.FIREBASE_TOKEN }}
             groups: QA
             releaseNotes: "Hey! This my first integrate Firebase distributions with Github Actions"
-            file: app/build/outputs/apk/debug/app-debug.apk
+            file: app/build/outputs/apk/debug/Hello-World-CI-CD-Github-Actions.apk
 
 #  build-ios:
 #    runs-on: macos-latest
