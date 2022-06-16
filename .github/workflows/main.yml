@@ -125,46 +125,46 @@ jobs:
         with:
           name: Hello-World-CI-CD-Github-Actions.apk
           path: app/build/outputs/apk/debug/app-debug.apk
-#
-#  build-ios:
-#    needs: [ package ]
-#    runs-on: macos-latest
-#    steps:
-#        - name: Checkout
-#          uses: actions/checkout@v2
-#
-#        - name: Setup Java JDK
-#          uses: actions/setup-java@v1
-#          with:
-#            java-version: 11
-#
-#        - name: Build Gradle
-#          run: ./gradlew build
-#
-#  distribute-ios:
-#    needs: build-ios # This is important
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#        - name: Upload a Build Artifact
-#          uses: actions/upload-artifact@v2
-#          with:
-#            name: app
-#            path: app/build/outputs/apk/debug/app-debug.apk
-#
-#        - name: build release
-#          run: ./gradlew assembleRelease
-#        - name: list files
-#          run: ls -lrt aapp/build/outputs/apk/debug
-#
-#        - name: Upload Artifact To Firebase App Distribution
-#          uses: wzieba/Firebase-Distribution-Github-Action@v1
-#          with:
-#            appId: ${{ secrets.FIREBASE_APP_ID }}
-#            token: ${{ secrets.FIREBASE_TOKEN }}
-#            groups: QA
-#            releaseNotes: "Hey! This my first integrate Firebase distributions with Github Actions"
-#            file: app/build/outputs/apk/debug/app-debug.apk
+
+  build-ios:
+    needs: [ package ]
+    runs-on: macos-latest
+    steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+
+        - name: Setup Java JDK
+          uses: actions/setup-java@v1
+          with:
+            java-version: 11
+
+        - name: Build Gradle
+          run: ./gradlew build
+
+  distribute-ios:
+    needs: build-ios # This is important
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: Upload a Build Artifact
+          uses: actions/upload-artifact@v2
+          with:
+            name: app
+            path: app/build/outputs/apk/debug/app-debug.apk
+
+        - name: build release
+          run: ./gradlew assembleRelease
+        - name: list files
+          run: ls -lrt aapp/build/outputs/apk/debug
+
+        - name: Upload Artifact To Firebase App Distribution
+          uses: wzieba/Firebase-Distribution-Github-Action@v1
+          with:
+            appId: ${{ secrets.FIREBASE_APP_ID }}
+            token: ${{ secrets.FIREBASE_TOKEN }}
+            groups: QA
+            releaseNotes: "Hey! This my first integrate Firebase distributions with Github Actions"
+            file: app/build/outputs/apk/debug/app-debug.apk
 
 #  build-ios:
 #    runs-on: macos-latest
