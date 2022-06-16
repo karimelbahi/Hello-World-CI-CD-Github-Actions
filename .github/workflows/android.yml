@@ -28,16 +28,16 @@ jobs:
 #      - name: Unit tests
 #        run: bash ./gradlew test --stacktrace
 
-    build-ios:
-      runs-on: macos-latest
+  build-ios:
+     runs-on: macos-latest
 
-      steps:
-        # build here
-        - name: Upload artifact
-          uses: actions/upload-artifact@v2
-          with:
-            name: YourApp.ipa
-            path: YourApp.ipa # Path to your IPA file will usually be root of the project (if you use Fastlane)
+     steps:
+       # build here
+       - name: Upload artifact
+         uses: actions/upload-artifact@v2
+         with:
+           name: YourApp.ipa
+           path: YourApp.ipa # Path to your IPA file will usually be root of the project (if you use Fastlane)
 
 
   build:
