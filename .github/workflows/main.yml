@@ -140,9 +140,10 @@ jobs:
         - name: Build Gradle
           run: ./gradlew build
 
-     distribute-ios:
+  distribute-ios:
       needs: build-ios
       runs-on: ubuntu-latest
+
       steps:
         - name: Upload a Build Artifact
           uses: actions/upload-artifact@v2
