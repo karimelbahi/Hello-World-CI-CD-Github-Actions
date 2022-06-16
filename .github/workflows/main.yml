@@ -147,7 +147,7 @@ jobs:
             path: app/build/outputs/apk/debug/app-debug.apk
 
         - name: Upload Artifact To Firebase App Distribution
-          uses: wzieba/Firebase-Distribution-Github-Action@v1
+          uses: wzieba/Firebase-Distribution-Github-Action@v1.3.3
           with:
             appId: ${{ secrets.FIREBASE_ID }}
             token: ${{ secrets.FIREBASE_TOKEN }}
