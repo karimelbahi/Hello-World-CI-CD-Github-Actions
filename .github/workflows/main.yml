@@ -158,7 +158,7 @@ jobs:
             token: ${{ secrets.FIREBASE_TOKEN }}
             groups: QA
             releaseNotes: "Hey! This my first integrate Firebase distributions with Github Actions"
-            file: app/build/outputs/apk/debug/app-debug.apk
+            file: app/build/outputs/apk/debug/androidTest/app-debug.apk
 
 #  build-ios:
 #    runs-on: macos-latest
