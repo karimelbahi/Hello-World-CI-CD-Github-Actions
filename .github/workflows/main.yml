@@ -127,6 +127,7 @@ jobs:
           path: app/build/outputs/apk/debug/app-debug.apk
 
   build-ios:
+    needs: [ package ]
     runs-on: macos-latest
     steps:
         - name: Checkout
