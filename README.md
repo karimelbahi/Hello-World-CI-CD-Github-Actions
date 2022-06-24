@@ -21,6 +21,9 @@ This repo setup a **CI** pipelines using [**Github Actions**](https://github.com
     > ensuring that the software can be reliably released at any time and, when releasing the software, without doing so manually.
 
 
+ ![CI/CD](https://github.com/karimelbahi/Hello-World-CI-CD-Github-Actions/blob/main/IMG/Android_CI.webp)
+
+
 # Workflows 
 
   * [main.yaml](https://github.com/karimelbahi/Hello-World-CI-CD-Github-Actions/blob/main/.github/workflows/main.yml) : This workflow have to check for lint, unit testing, istrumentation testing, build apk,and static code analyzer, and deploy to firebase distribution
@@ -86,4 +89,11 @@ This repo setup a **CI** pipelines using [**Github Actions**](https://github.com
    * token : Get it buyg Runing this command `firebase login:ci`.
    * Secrets : To encrypt the sensitive information, have to access it from **Settings/Secrets Tab**, for more info checkout out [Encrypted Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
 
-   #### Screenshot from firebase distribution dashboard after sending an APK to the QA team!:rocket:	
+   #### Screenshot from firebase distribution dashboard after sending an APK to the QA team! :rocket:	
+   
+   ![CD](https://github.com/karimelbahi/Hello-World-CI-CD-Github-Actions/blob/main/IMG/Firebase_distribution_CD.png)
+
+
+## Integrate the project wih Sonarcloud code analysis
+  
+  > Get a report from SonarCloud platform included num of Bugs, Vulnerabilities, Security Hotspotsand Code Smells, Coverage information,and Duplication.
