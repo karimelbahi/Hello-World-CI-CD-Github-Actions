@@ -77,7 +77,7 @@ This repo setup a **CI** pipelines using [**Github Actions**](https://github.com
 
    * To build CD pipelines, have to integrate the application with **Firebase Distribution** or any other marketplace.
 
-   > Firebase Distribution is used to distributing the app to QA team Automatically after all jobs succeeded. 
+      > Firebase Distribution is used to distributing the app to QA team Automatically after all jobs succeeded. 
 
    * Build Gradle : Build an APK.
    * [Firebase Distribution](https://firebase.google.com/docs/app-distribution): integrate your app with firebase distribution.
