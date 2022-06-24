@@ -76,6 +76,22 @@ This repo setup a **CI** pipelines using [**Github Actions**](https://github.com
       * [Setup Java JDK](https://github.com/marketplace/actions/setup-java-jdk) : Set up Java JDK.
       * [Upload Build Lint Report](https://github.com/marketplace/actions/upload-a-build-artifact) : This uploads artifacts from your workflow allowing you to share data between jobs and store data once a workflow is complete.
 
+### Reun and create Unit test report
+
+   * ./gradlew test
+
+      > To run the unit tests.
+
+### Reun and create instrumentation test report
+
+   * ./gradlew connectedCheck
+
+      > To running the instrumentation tests.
+
+   * reactivecircus/android-emulator-runner@v2
+
+      > To start the android emulator using.
+
 ## Let's Start With CD
 
    * To build CD pipelines, have to integrate the application with **Firebase Distribution** or any other marketplace.
@@ -94,6 +110,8 @@ This repo setup a **CI** pipelines using [**Github Actions**](https://github.com
    ![CD](https://github.com/karimelbahi/Hello-World-CI-CD-Github-Actions/blob/main/IMG/Firebase_distribution_CD.png)
 
 
-## Integrate the project wih Sonarcloud code analysis
+## Integrate the project wih Sonarcloud code analysis. 
   
   > Get a report from SonarCloud platform included num of Bugs, Vulnerabilities, Security Hotspotsand Code Smells, Coverage information,and Duplication.
+  
+  ![Sonarcloud](https://github.com/karimelbahi/Hello-World-CI-CD-Github-Actions/blob/develop/IMG/Sonarcloud.png)
