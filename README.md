@@ -75,6 +75,7 @@ This repo setup a **CI** pipelines using [**Github Actions**](https://github.com
       * [Checkout](https://github.com/marketplace/actions/checkout) : This action checks-out your repository under `$GITHUB_WORKSPACE`, so your workflow can access it.
       * [Setup Java JDK](https://github.com/marketplace/actions/setup-java-jdk) : Set up Java JDK.
       * [Upload Build Lint Report](https://github.com/marketplace/actions/upload-a-build-artifact) : This uploads artifacts from your workflow allowing you to share data between jobs and store data once a workflow is complete.
+      * [Upload Build APK](https://github.com/marketplace/actions/release-apk) : TO generate and build an APK.
 
 ### Reun and create Unit test report
 
@@ -105,7 +106,7 @@ This repo setup a **CI** pipelines using [**Github Actions**](https://github.com
    * token : Get it buyg Runing this command `firebase login:ci`.
    * Secrets : To encrypt the sensitive information, have to access it from **Settings/Secrets Tab**, for more info checkout out [Encrypted Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
 
-   #### Screenshot from firebase distribution dashboard after sending an APK to the QA team! :rocket:	
+   #### Screenshot from firebase distribution dashboard after sending an APK to the QA team!
    
    ![CD](https://github.com/karimelbahi/Hello-World-CI-CD-Github-Actions/blob/main/IMG/Firebase_distribution_CD.png)
 
@@ -115,3 +116,7 @@ This repo setup a **CI** pipelines using [**Github Actions**](https://github.com
   > Get a report from SonarCloud platform included num of Bugs, Vulnerabilities, Security Hotspotsand Code Smells, Coverage information,and Duplication.
   
   ![Sonarcloud](https://github.com/karimelbahi/Hello-World-CI-CD-Github-Actions/blob/develop/IMG/Sonarcloud.png)
+
+## Final Result. :rocket:	
+
+  ![Final -Result](https://github.com/karimelbahi/Hello-World-CI-CD-Github-Actions/blob/main/IMG/Final_Result.png)
