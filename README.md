@@ -75,7 +75,7 @@ This repo setup a **CI** pipelines using [**Github Actions**](https://github.com
       * [Checkout](https://github.com/marketplace/actions/checkout) : This action checks-out your repository under `$GITHUB_WORKSPACE`, so your workflow can access it.
       * [Setup Java JDK](https://github.com/marketplace/actions/setup-java-jdk) : Set up Java JDK.
       * [Upload Build Lint Report](https://github.com/marketplace/actions/upload-a-build-artifact) : This uploads artifacts from your workflow allowing you to share data between jobs and store data once a workflow is complete.
-      * [Upload Build APK](https://github.com/marketplace/actions/release-apk) : TO generate and build an APK.
+      * [Upload Build APK](https://github.com/marketplace/actions/release-apk) : To generate and build an APK.
 
 ### Reun and create Unit test report
 
